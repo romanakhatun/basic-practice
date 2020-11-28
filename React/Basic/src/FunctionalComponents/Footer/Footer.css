@@ -1,0 +1,52 @@
+/* Font Family */
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Arapey&display=swap');
+.col h2, .privacy{
+    font-family: 'EB Garamond', serif;
+}
+
+/*------------------------------------*/
+.main-footer{
+    /* position: fixed;
+    left: 0;
+    bottom: 0; */
+}
+.footer-top{
+    width: 100%;
+    background-color: brown;
+    padding: 20px;
+    display: block;
+    overflow: hidden;
+}
+.col{
+    float: left;
+    color: #ffffff;
+    padding: 30px;
+}
+.footer-medicare{
+    display: block;
+    width: 20%;
+    margin-top: 15px;
+}
+.popular-post{
+    display: flex;
+}
+.post-img img{
+    padding-right: 10px;
+    margin-bottom: 15px;
+    width: 100px;
+}
+.faStarIcon{
+    color: palegreen;
+}
+.footer{
+    background: rgb(156, 54, 54);
+    color: #ffff;
+    padding: 20px;
+    text-align: center;
+}
+.footer .privacy{
+    text-decoration: underline;
+    font-size: 20px;
+    cursor: pointer;
+}

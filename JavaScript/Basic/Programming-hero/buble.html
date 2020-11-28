@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Buble</title>
+    </head>
+    <style>
+        li {
+            cursor: pointer;
+        }
+    </style>
+
+    <body>
+        <div id="container">
+            <ul id="UL">
+                <li id="LI">Lore ipsum</li>
+                <li id="LI">Lore ipsum</li>
+                <li id="LI">Lore ipsum</li>
+            </ul>
+        </div>
+        <script>
+            document.getElementById("container").addEventListener('click', function () {
+                console.log('Container click')
+            })
+            document.getElementById("UL").addEventListener('click', function () {
+                console.log('ul click')
+                event.stopPropagation()
+            })
+            document.getElementById("LI").addEventListener('click', function () {
+                console.log('li click')
+            })
+
+        </script>
+    </body>
+
+</html>

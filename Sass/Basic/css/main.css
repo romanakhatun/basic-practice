@@ -1,0 +1,135 @@
+body, html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+body #bg {
+  -webkit-clip-path: polygon(100% 0, 100% 82%, 45% 100%, 0 100%, 0 0);
+          clip-path: polygon(100% 0, 100% 82%, 45% 100%, 0 100%, 0 0);
+  background-color: #005DFF;
+  width: 100%;
+  min-height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+@media (min-width: 840px) {
+  body #bg {
+    -webkit-clip-path: polygon(0 0, 75% 0, 55% 100%, 0% 100%);
+            clip-path: polygon(0 0, 75% 0, 55% 100%, 0% 100%);
+  }
+}
+
+body header a {
+  color: #ffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 15px;
+  display: block;
+}
+
+@media (min-width: 840px) {
+  main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% auto;
+        grid-template-columns: 50% auto;
+        grid-template-areas: "primary card";
+  }
+}
+
+main section#card {
+  padding: 20px;
+  width: 80%;
+  margin: 1em auto;
+  border-radius: 20px;
+  background-color: #ffff;
+  -webkit-box-shadow: 0 10px 30px rgba(63, 63, 63, 0.2);
+          box-shadow: 0 10px 30px rgba(63, 63, 63, 0.2);
+}
+
+@media (min-width: 840px) {
+  main section#card {
+    grid-area: card;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 1em;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+main ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+main li {
+  margin-bottom: 15px;
+}
+
+main li span {
+  width: 30px;
+  height: 30px;
+  background-color: #ccdfff;
+  border-radius: 50%;
+  position: absolute;
+}
+
+main li strong {
+  display: inline-block;
+  margin-left: 40px;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+main section#primary {
+  color: #ffff;
+  text-align: center;
+  margin-top: 10px;
+}
+
+@media (min-width: 840px) {
+  main section#primary {
+    grid-area: primary;
+    -webkit-box-align: left;
+        -ms-flex-align: left;
+            align-items: left;
+    margin: 4em 0 0 4em;
+  }
+}
+
+main section#primary h1 {
+  text-transform: uppercase;
+  font-size: 3em;
+}
+
+@media (min-width: 840px) {
+  main section#primary h1 {
+    font-size: 4em;
+    line-height: .9em;
+  }
+}
+
+main section#primary p {
+  font-size: 1.2em;
+}
+
+main section#primary a {
+  text-decoration: none;
+  background-color: #FFF6BB;
+  padding: 15px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: block;
+  width: 80%;
+  display: inline-block;
+}
+/*# sourceMappingURL=main.css.map */

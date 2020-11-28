@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Script Basic</title>
+	<link rel="stylesheet" href="script.css" />
+	<!--JaQuery Calling-->
+	<script src="jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <!--document.Write Start-->
+	<script>
+	 document.write("I Love my Bangladesh");
+	 document.write("<h1>I Love my Bangladesh</h1>");
+	 document.write("34*35");
+	 document.write(34*35);
+	</script>
+	 <button onclick="document.write('Hi!Mita,Where are you going now?');">Click</button>
+	 
+	<!--document.getElementById Start-->
+	 <h2 id="demo">This is a simple heading</h2>
+	 <script type="text/javascript"> 
+	    document.getElementById('demo').innerHTML='5000*9';
+	 </script>
+	 <button onclick="document.getElementById('demo').innerHTML='it is innerHTML';">Click</button>
+	 <br /><br> 
+	 
+	 <!--Console.log Start-->
+	 <script>
+      console.log('IT is a test project');
+	 </script>
+	 
+	 
+	 <p id="demo"></p>
+	 <label for="">Input in pound:</label>
+	 <input type="number" oninput="weightConverter(this.value)"onchange="weightConverter(this.value)"/>
+	 <p>KG: <span id="outputKg"></span></p><br />
+	 
+	<!--JaQuery-->
+	<script> 
+		$(document).ready(function(){
+			//$(".hidden").hide();
+			/*$(".hidden").click(function(){
+			   $(this).hide();})*/
+		  $("#hide").click(function(){
+			 $(".hidden").hide(1000); 
+		   });
+		   $("#show").click(function(){
+			 $(".hidden").show("fast"); 
+		   });
+		}); 
+	</script><br />
+	<img src="img/download (1).jfif" alt="" /><br />
+	<img class="hidden" src="img/images (3).jfif" alt="" /><br />
+	<button id="hide">Hide</button>
+	<button id="show">Show</button><br />
+	<img src="img/images (16).jfif" alt="" /><br />
+	 
+	 
+	 <!--script Calling-->
+	 <script type="text/javascript" src="frist.js"></script>
+	 <!--Fade effect-->
+	 <script>
+	    $(document).ready(function(){
+		  $("#btn").click(function(){
+		    $(".div1").fadeToggle(1000);
+		    $(".div2").fadeToggle(2000);
+		    $(".div3").fadeToggle(3000);
+		  })
+		});
+	 </script><br /><br />
+     <br />
+     <button id="btn">Fade Toggle</button><br />
+     <div class="div1"></div>
+     <div class="div2"></div>
+     <div class="div3"></div>
+	 <br /><br /><br /><br /><br /><br /><br /><br />
+	<!--Slide Down-->
+	 <script>
+       $(document).ready(function(){
+	      $("#mybtn").click(function(){
+		    //$(".panel").slideDown();
+		    //$(".panel").slideUp();
+			$(".panel").slideToggle();
+		  });
+	   });
+	 </script>
+	 <div id="mybtn">Click To Slide Down</div>
+	 <div class="panel">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit Ut wisi enim ad minim veniam, quis nostrud exerci tation pit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit</div>
+	<br /><br /><br />
+	<!--Animation-->
+	<script>
+	    $(document).ready(function(){
+		  $("#button").click(function(){
+		   /* $(".demo").animate({
+			   height:'150px',
+			   width:'150px'
+			});*/
+			var myAnimation = $(".demo");
+			myAnimation.animate({width:'150px'},"fast");
+			myAnimation.animate({height:'150px'});
+			myAnimation.animate({width:'220px'});
+			myAnimation.animate({fontSize:'40px'});
+			myAnimation.animate({left:'100px'});
+			myAnimation.animate({width:'300px'},"fast");
+			myAnimation.animate({height:'300px'},"slow");
+			myAnimation.animate({marginLeft:'200px'},"slow");
+		    myAnimation.animate({marginTop:'100px'},1000);
+		  });
+		  	$("#stop").click(function(){
+		   $(".demo").stop(true);
+		});
+		});
+
+	</script>
+	<button id="button">Click Animation</button><br />
+	<button id="stop">Stop Animate</button><br />
+	<div class="demo">Romana</div>
+	<br /><br /><br />
+</body>
+</html>

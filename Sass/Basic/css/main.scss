@@ -1,0 +1,142 @@
+$textDecoration: none;
+$listStyleType: none;
+$textTransform: uppercase;
+$borderRadius: 20px;
+$desktop: 840px;
+
+$colors: (
+    primary: #005DFF,
+    accent: #FFF6BB,
+    white: #ffff,
+    primary-light: lighten(#005DFF, 40%)
+);
+
+@function color($color-name){
+    @return map-get($colors, $color-name)
+};
+
+@mixin desktop {
+    @media(min-width: #{$desktop}){
+        @content
+    }
+}
+
+
+body, html{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+
+    #bg{
+        clip-path: polygon(100% 0, 100% 82%, 45% 100%, 0 100%, 0 0);
+        background-color: color(primary);
+        width: 100%;
+        min-height: 100%;
+        position: absolute;
+        z-index: -1;
+
+        @include desktop{
+            clip-path: polygon(0 0, 75% 0, 55% 100%, 0% 100%);
+        }
+    }
+    header a{
+        color: color(white);
+        text-decoration: $textDecoration;
+        text-transform: $textTransform;
+        padding: 15px;
+        display: block;
+    }
+}
+
+main{
+
+    @include desktop{
+        display: grid;
+        grid-template-columns: 50% auto;
+        grid-template-areas: "primary card";
+    }
+
+    section#card{ 
+       padding: 20px;
+       width: 80%;
+       margin: 1em auto;
+       border-radius: $borderRadius;
+       background-color: color(white);
+       box-shadow: 0 10px 30px rgba($color: #3f3f3f, $alpha: .2);
+       
+        @include desktop{
+            grid-area: card;
+            height: fit-content;
+            margin: 1em;
+            align-self: center;
+        }
+    }
+
+    
+
+    ul{
+        list-style-type: $listStyleType; 
+        margin: 0;padding: 0;
+
+    }
+
+    li{
+        margin-bottom: 15px;
+
+        span{
+            width: 30px;
+            height: 30px;
+            background-color: color(primary-light);
+            border-radius: 50%;
+            position: absolute;
+
+        }
+
+        strong{
+            display: inline-block;
+            margin-left: min(40px);
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+    }
+    section#primary{
+        color: color(white);
+        text-align: center;
+        margin-top: 10px;
+
+        @include desktop{
+            grid-area: primary;
+            align-items: left;
+            margin: 4em 0 0 4em;
+        }
+
+        h1{
+            text-transform: $textTransform;
+            font-size: 3em;
+
+            @include desktop{
+                font-size: 4em;
+                line-height: .9em;
+            }
+        }
+        p{
+            font-size: 1.2em;
+        }
+        a{
+            text-decoration: $textDecoration;
+            background-color: color(accent);
+            padding: 15px;
+            border-radius: $borderRadius;
+            text-transform: $textTransform;
+            font-weight: bold;
+            display: block;
+            width: 80%;
+            display: inline-block;
+
+        }
+
+    }
+
+}

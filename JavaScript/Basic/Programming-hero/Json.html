@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+
+	<body>
+		<h2>It is JSON</h2>
+		<h3>JavaScript Object Notation</h3>
+		<script>
+			// const name = { name1: "mitu", name2: "titu" };
+			const nameUser = JSON.stringify(name);
+			//console.log(nameUser);
+
+			const name = { name1: "mitu", name2: "titu" };
+			const nameUserFrom = JSON.parse(nameUser);
+			console.log(nameUserFrom);
+		</script>
+	</body>
+
+</html>

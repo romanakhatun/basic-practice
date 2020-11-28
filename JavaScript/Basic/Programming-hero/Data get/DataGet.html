@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .Useritem {
+                background: rgb(196, 116, 116);
+                box-shadow: 5px 5px 10px rgb(219, 209, 208);
+                padding: 15px;
+                margin: 10px;
+                color: #ffffff;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- <ul id="userList">
+
+        </ul> -->
+        <!-- <script>
+            fetch('https://jsonplaceholder.typicode.com/users')
+                .then(response => response.json())
+                .then(data => showData(data))
+
+            function showData(data) {
+                let listItem = ''
+                data.forEach(userRrelated => {
+                    listItem = listItem + `<li>${userRrelated.name}:Email- ${userRrelated.email}</li>`
+                });
+                const ul = document.getElementById("userList")
+                ul.innerHTML = listItem;
+            }
+        </script> -->
+        <div id="userList">
+
+        </div>
+        <script>
+            fetch('https://jsonplaceholder.typicode.com/users')
+                .then(response => response.json())
+                .then(data => showData(data))
+
+            function showData(data) {
+                let listItem = ''
+                data.forEach(userRrelated => {
+                    listItem = listItem + `<div class="Useritem">
+                        <h4>Name:${userRrelated.name}</h4>
+                        <p>Email:${userRrelated.email}</p>
+                        <p>Zipcode:${userRrelated.address.zipcode}</p>
+                    </div>`
+                });
+                const div = document.getElementById("userList")
+                div.innerHTML = listItem;
+            }
+        </script>
+    </body>
+
+</html>

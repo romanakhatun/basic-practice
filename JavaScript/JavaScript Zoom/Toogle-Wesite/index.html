@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Simple Off canvas Sidebar</title>
+	<link rel="stylesheet" href="style.css" />
+	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+
+
+<div id="sidebar">
+	<div class="sb-main">
+		<div class="sb-content">
+			<h2>jQueryScript</h2>
+			<p>Any Content Here</p>
+			<div class="close close1">X</div>
+		</div>
+	</div>
+</div>
+<div id="sidebar2">
+	<div class="sb-main">
+		<div class="sb-content">
+			<div class="close close2">X</div>
+			<img src="img/images (3).jfif" alt="Rose images" />
+			<title>this is a wonderful images</title>
+		</div>
+	</div>
+</div>
+<div id="main">
+	<div class="container">
+	   <h1>Simple Off-canvas Sidebar Example</h1>
+		 <div id="carbon-block" style="margin:50px auto"></div>
+<div style="margin:50px auto"></div>
+		<button class="sidebarToggle">Toggle Left</button> -
+		<button class="sidebarToggle2">Toggle Right</button> -
+		<button class="sidebarToggleAll">Toggle All</button>
+		<br><br>
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+	</div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/simplesidebar.min.js"></script>
+<script>
+$(function() {
+
+	let sidebar = $('#sidebar').SimpleSidebar({
+		mainDiv: $('#main'),
+		toggleEl: $('.sidebarToggle'),
+		rtl: false,
+	});
+
+	let sidebar2 = $('#sidebar2').SimpleSidebar({
+		mainDiv: $('#main'),
+		toggleEl: $('.sidebarToggle2'),
+		rtl: true,
+	});
+
+	$('.sidebarToggleAll').click(function() {
+		sidebar.toggle();
+		sidebar2.toggle();
+	});
+
+	$('.close1').click(function() {
+		sidebar.toggle();
+	});
+
+	$('.close2').click(function() {
+		sidebar2.toggle();
+	});
+
+});
+</script>
+<script>
+try {
+  fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+    return true;
+  }).catch(function(e) {
+    var carbonScript = document.createElement("script");
+    carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
+    carbonScript.id = "_carbonads_js";
+    document.getElementById("carbon-block").appendChild(carbonScript);
+  });
+} catch (error) {
+  console.log(error);
+}
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</div>
+</body>
+</html>

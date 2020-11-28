@@ -1,0 +1,10 @@
+ul{
+    display:inline-block;
+}
+.productCell{
+    background-color: rgb(230, 136, 136);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    
+}

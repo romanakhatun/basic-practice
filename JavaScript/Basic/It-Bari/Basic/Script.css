@@ -1,0 +1,65 @@
+#btn{
+	margin-left: 6px;
+    margin-bottom: 5px;
+    margin-top: 7px;
+}
+
+.div1, .div2, .div3{   
+    width: 165px;
+    height: 152px;
+	float:left;
+	margin-left:5px;
+	margin-bottom:10px;
+	padding-left:10px;
+}
+.div1{
+    background:yellow;
+}
+.div2{
+	background:green;
+}
+.div3{
+    background:red;
+	
+}
+#mybtn ,.panel{
+	padding:23px;
+	text-align:center;
+	background: #addc29;
+	border:solid 1px #bd97ff;
+}
+#mybtn{
+	margin-top:20px;
+	cursor:pointer;
+}
+.panel{
+	padding:50px;
+	display:none;
+}
+/*animation*/
+#button{
+	margin-bottom:10px;
+	background:#ddd;
+	padding:5px;
+	border-radius:5px;
+	font-size:15px;
+}
+.demo{
+    width: 130px;
+    height: 130px;
+	background:red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
