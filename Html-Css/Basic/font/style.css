@@ -1,0 +1,38 @@
+#Example_E {
+    width: 173px;
+    height: 129px;
+	background:#c3c8ca;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 5px #888;
+	margin-top:10px;
+    margin-left:60px;
+   	
+}
+ .time{
+	color: #fff;
+    padding-left: 47px;
+    padding-top: 35px;
+    font-size: 36px;	
+}
+.date{
+    margin-top: -7px;
+    background: #858bb1;
+    width: 182px;    
+    height: 23px;
+    display: block;
+	padding-top:5px;
+	padding-left:5px;
+    margin-left: 53px;
+	border-radius:5px;
+    color: #fff;	
+}
+
+
+
+
+
+
+
+
+

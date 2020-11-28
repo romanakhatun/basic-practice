@@ -1,0 +1,265 @@
+body{
+	overflow-x:hidden;
+}
+
+::selection{
+	background-color:red;
+}
+
+.underline{
+	text-decoration:underline;
+    font-variant:small-caps;	
+}
+.overline{
+	text-decoration:overline;
+}
+.line-through{
+	text-decoration:line-through;
+}
+/* Background image add */
+.img_add{
+	background-image:url("img/White-flower.jpg");
+	background-repeat:no-repeat;	
+	/*background-attachment:scroll;
+	  background-size:200px 200px;*/
+	background-attachment:fixed;
+}
+/*
+  background-repeat:repeat-x;
+  background-repeat:repeat-y;
+  background-size:cover;
+  
+*/
+/* Shapes */
+.shapes{
+		width: 280px;
+		height: 280px;
+		background-size: cover;
+		animation: clips 3s ease infinite;
+		clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+		background: url("https://ununsplash.imgix.net/photo-1427434846691-47fc561d1179?dpr=2&fit=crop&fm=jpg&h=700&q=75&w=1050") center no-repeat;
+	  }
+	  
+	  @-webkit-keyframes clips {
+		50% {
+			clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+		}
+	  }
+	  
+	   @keyframes clips {
+		50% {
+			clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+		}
+	  }
+/* table */
+table{
+	width:500px;
+	text-align:center;
+	background-color:#ddd;
+}
+/*
+table caption{
+	background-color:#ddd
+	
+}
+*/
+.dadi{
+	text-decoration:underline;
+	color:#221e23;
+	text-align:left;
+}
+.nanziba{
+	font-style:italic;
+    color:#f50d5c;	
+}
+.salma{
+	font-family:arial;
+	color:#b9c164;
+}
+.romana{
+	text-decoration:overline;
+	color:#221e23;
+}
+
+.fahmida{
+	text-transform:uppercase;
+	color:#4052b7;
+	background-color:#ffeb3b;
+}
+.mukta{
+	font-variant:small-caps;
+	color:#b9c164;
+}
+.shirina{
+	font-weight:bold;
+	color:#4052b7;
+}
+.sumiya{
+	text-decoration:line-through;
+	color:#f50d5c;
+}
+
+#wrapper > h3{
+	color:red;
+}
+
+/* hidden_scroll */
+.hidden_scroll {
+	border:3px solid #ffc107;
+	width:600px;
+	height:200px;
+	overflow:scroll;
+	padding-top:10px;
+	padding-left:10px;
+	margin-left:10px
+}
+/*
+  overflow:hidden;
+  display:block;
+  float:right;
+  float:left;
+  display:none;
+*/
+/*Psudo*/
+.psudo{
+	margin-top:10px;
+	width:150px;
+	height:150px;
+	background-color:red;
+	margin-left:10px;
+	/*transition: background-color 1s, width 2s ease-out , height 3s;*/
+	-moz-transition:all 2s cubic-bezier(1, 0.63, 1, 1);
+	-webkit-transition:all 2s cubic-bezier(1, 0.63, 1, 1);
+	-ms-transition:all 2s cubic-bezier(1, 0.63, 1, 1);
+	-o-transition:all 2s cubic-bezier(1, 0.63, 1, 1);
+	transition:all 2s cubic-bezier(1, 0.63, 1, 1);
+}
+.psudo:hover{
+	background-color:yellow;
+	/*width:200px;
+	height:200px;
+	transition:all 2s ease;*/
+	transform:rotate(60deg);
+	-moz-transform:rotate(60deg);
+	-webkit-transform:rotate(60deg);
+	-ms-transform:rotate(60deg);
+	-o-transform:rotate(60deg);
+	
+}
+/*How made in form*/
+input[type=text]{
+	width:180px;
+	height:30px;
+    /*border:1px solid #b9c164;*/
+	font-style:italic;
+}
+label{
+	color:#E91E68;
+	font-weight:bold;
+	font-style:italic;
+	text-transform:uppercase;
+}
+input[type=submit]{
+	border-radius:3px;
+	padding:3px;
+	width:60px;
+	color:#795548;
+}
+input[type=reset]{
+	border-radius:3px;
+	padding:3px;
+	color:#795548;
+	width:60px;
+}
+/*how made in button*/
+.btn{
+    cursor:pointer;
+}
+
+.lin{
+	width:315px;
+	height:188px;
+	background:-o-linear-gradient( left, red, yellow, green );	
+	background:-moz-linear-gradient( left, red, yellow, green )	;
+	background:-webkit-linear-gradient(left, red, yellow, green );	
+	background:linear-gradient( to left, red, yellow, green );	
+}
+.lin:hover{
+	background:linear-gradient( to bottom, red, yellow, green);
+	cursor:pointer;
+}
+/*Animation*/
+.mydiv1{
+	width:150px;
+	height:150px;
+	background-color:red;
+	
+	-webkit-animation-name: romana;
+	animation-name: romana;
+	
+	-webkit-animation-duration: 12s;
+	animation-duration: 12s;
+	
+	-webkit-animation-iteration-count: 2;
+	animation-iteration-count: 2;
+	animation-delay:3s;
+}
+@keyframes romana{
+	0%{background-color:#798229}
+	20%{background-color:green;border-radius:50%}
+	40%{background-color:yellow;border-radius:100px 10px 100px 10px}
+	50%{background-color:#9c27b0;border-radius:50%}
+	70%{background-color:red;border-radius:50%}
+}
+
+.mydiv2{
+	width:150px;
+	height:150px;
+	background-color:yellow;
+	position:relative;	
+	animation-name:romana;		
+	animation-duration: 2s;		
+	animation-iteration-count:infinite;
+	animation-delay:1s;
+	animation-direction:alternate;
+}
+@keyframes romana{
+	from{left:0}
+	to{right:200px;}
+}
+audio{
+	background:#e91e63;	
+	margin-left:10px;
+}
+/*how add video*/
+video{
+	width:300px;	
+	margin-left:10px;	
+}
+/* font-face */
+@font-face{
+	font-family:"WendyLPStd-Medium";
+	src:url("font/WendyLPStd-Medium.ttf") format("truetype");
+}
+.font{
+   font-family:WendyLPStd-Medium;
+   font-size:30px;
+}
+
+/*Jumb to a Description List*/
+.top{
+	text-decoration: none;
+    font-size: 30px;
+    color: #ffffff;
+    background: #FF9800;
+	margin:54px;	
+}
+/*Text cricle*/
+
+svg {
+	fill: currentColor;
+	height: auto;
+	max-width: 66vmin;
+	transform-origin: center;
+	width: 66%;
+}

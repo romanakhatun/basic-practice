@@ -1,0 +1,48 @@
+*{margin:0;padding:0}
+#main_wrapper{
+	width:960px;
+	margin:0 auto;
+}
+.column{
+	float:left;
+	margin-right:15px;
+	margin-top:50px;
+}
+img{
+	width: 270px;
+    height: 201px;
+
+}
+
+h2{
+	color:orange;
+	font-style:italic;
+}
+p{    
+    width: 269px;
+    height: 213px;
+    text-align: justify;
+}
+a{
+	display:block;
+	background-color:#f7e96e;
+	text-align:center;
+	padding:5px;
+	color:#795548;
+	transition:1s all ease;
+	text-decoration:none;
+}
+a:hover{
+	background-color:black;
+	color:white;
+	
+}
+
+
+
+
+
+
+
+
+
